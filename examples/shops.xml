@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfShopDao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ShopDao>
+    <Id>1</Id>
+    <Name>Пятёрочка</Name>
+    <Code>SHOP-001</Code>
+  </ShopDao>
+  <ShopDao>
+    <Id>2</Id>
+    <Name>Магнит</Name>
+    <Code>SHOP-002</Code>
+  </ShopDao>
+  <ShopDao>
+    <Id>3</Id>
+    <Name>Перекрёсток</Name>
+    <Code>SHOP-003</Code>
+  </ShopDao>
+</ArrayOfShopDao>

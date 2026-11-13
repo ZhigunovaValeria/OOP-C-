@@ -1,0 +1,37 @@
+﻿[
+  {
+    "Id": 1,
+    "FirstName": "Иван",
+    "LastName": "Иванов",
+    "MiddleName": "Иванович",
+    "BirthDate": "1990-05-15T00:00:00"
+  },
+  {
+    "Id": 2,
+    "FirstName": "Анна",
+    "LastName": "Петрова",
+    "MiddleName": null,
+    "BirthDate": "1995-10-20T00:00:00"
+  },
+  {
+    "Id": 3,
+    "FirstName": "Сергей",
+    "LastName": "Сидоров",
+    "MiddleName": "Александрович",
+    "BirthDate": "1985-03-08T00:00:00"
+  },
+  {
+    "Id": 4,
+    "FirstName": "Ольга",
+    "LastName": "Васильева",
+    "MiddleName": "Николаевна",
+    "BirthDate": "1990-07-12T00:00:00"
+  },
+  {
+    "Id": 5,
+    "FirstName": "Елена",
+    "LastName": "Смирнова",
+    "MiddleName": "Дмитриевна",
+    "BirthDate": "1980-01-10T00:00:00"
+  }
+]

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Shop.Dal/Shop.Dal.csproj" />
+    <ProjectReference Include="../Shop.Bll/Shop.Bll.csproj" />
+  </ItemGroup>
+</Project>

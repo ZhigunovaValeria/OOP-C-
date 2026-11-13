@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfGoodDao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GoodDao>
+    <Id>1</Id>
+    <Name>Хлеб бородинский</Name>
+    <Code>ART-0001</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>2</Id>
+    <Name>Молоко 3.2%</Name>
+    <Code>ART-0002</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>3</Id>
+    <Name>Сыр Российский</Name>
+    <Code>ART-0003</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>4</Id>
+    <Name>Колбаса Докторская</Name>
+    <Code>ART-0004</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>5</Id>
+    <Name>Вода минеральная</Name>
+    <Code>ART-0005</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>6</Id>
+    <Name>Сок апельсиновый</Name>
+    <Code>ART-0006</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>7</Id>
+    <Name>Шоколад молочный</Name>
+    <Code>ART-0007</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>8</Id>
+    <Name>Чай чёрный</Name>
+    <Code>ART-0008</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>9</Id>
+    <Name>Кофе зерновой</Name>
+    <Code>ART-0009</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>10</Id>
+    <Name>Сахар-песок</Name>
+    <Code>ART-0010</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>11</Id>
+    <Name>Соль поваренная</Name>
+    <Code>ART-0011</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>12</Id>
+    <Name>Макароны спагетти</Name>
+    <Code>ART-0012</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>13</Id>
+    <Name>Рис шлифованный</Name>
+    <Code>ART-0013</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>14</Id>
+    <Name>Масло подсолнечное</Name>
+    <Code>ART-0014</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>15</Id>
+    <Name>Яйца куриные С1</Name>
+    <Code>ART-0015</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>16</Id>
+    <Name>Филе куриное</Name>
+    <Code>ART-0016</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>17</Id>
+    <Name>Минтай свежемороженый</Name>
+    <Code>ART-0017</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>18</Id>
+    <Name>Огурцы свежие</Name>
+    <Code>ART-0018</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>19</Id>
+    <Name>Яблоки Голден</Name>
+    <Code>ART-0019</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>20</Id>
+    <Name>Бананы</Name>
+    <Code>ART-0020</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>21</Id>
+    <Name>Масло сливочное 82.5%</Name>
+    <Code>ART-0021</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>22</Id>
+    <Name>Йогурт натуральный</Name>
+    <Code>ART-0022</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>23</Id>
+    <Name>Сметана 20%</Name>
+    <Code>ART-0023</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>24</Id>
+    <Name>Творог 9%</Name>
+    <Code>ART-0024</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>25</Id>
+    <Name>Кефир 1%</Name>
+    <Code>ART-0025</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>26</Id>
+    <Name>Сыр Моцарелла</Name>
+    <Code>ART-0026</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>27</Id>
+    <Name>Пельмени домашние</Name>
+    <Code>ART-0027</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>28</Id>
+    <Name>Сосиски молочные</Name>
+    <Code>ART-0028</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>29</Id>
+    <Name>Чай зелёный</Name>
+    <Code>ART-0029</Code>
+  </GoodDao>
+  <GoodDao>
+    <Id>30</Id>
+    <Name>Печенье овсяное</Name>
+    <Code>ART-0030</Code>
+  </GoodDao>
+</ArrayOfGoodDao>

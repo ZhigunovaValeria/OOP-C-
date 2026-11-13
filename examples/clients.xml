@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClientDao xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClientDao>
+    <Id>1</Id>
+    <FirstName>Иван</FirstName>
+    <LastName>Иванов</LastName>
+    <MiddleName>Иванович</MiddleName>
+    <BirthDate>1990-05-15T00:00:00</BirthDate>
+  </ClientDao>
+  <ClientDao>
+    <Id>2</Id>
+    <FirstName>Анна</FirstName>
+    <LastName>Петрова</LastName>
+    <BirthDate>1995-10-20T00:00:00</BirthDate>
+  </ClientDao>
+  <ClientDao>
+    <Id>3</Id>
+    <FirstName>Сергей</FirstName>
+    <LastName>Сидоров</LastName>
+    <MiddleName>Александрович</MiddleName>
+    <BirthDate>1985-03-08T00:00:00</BirthDate>
+  </ClientDao>
+  <ClientDao>
+    <Id>4</Id>
+    <FirstName>Ольга</FirstName>
+    <LastName>Васильева</LastName>
+    <MiddleName>Николаевна</MiddleName>
+    <BirthDate>1990-07-12T00:00:00</BirthDate>
+  </ClientDao>
+  <ClientDao>
+    <Id>5</Id>
+    <FirstName>Елена</FirstName>
+    <LastName>Смирнова</LastName>
+    <MiddleName>Дмитриевна</MiddleName>
+    <BirthDate>1980-01-10T00:00:00</BirthDate>
+  </ClientDao>
+</ArrayOfClientDao>
