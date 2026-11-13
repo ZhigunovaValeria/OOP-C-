@@ -3,7 +3,7 @@ using Core.Interfaces;
 using Shop.Bll.Entities;
 using Shop.Dal.Entities;
 using Shop.Dal.Repositories;
-
+using Shop.Dal.Database;
 
 namespace Shop.Tests;
 
@@ -33,7 +33,26 @@ internal static class Program
                     () => new() { FirstName = "Анна", LastName = "Петрова", MiddleName = null, BirthDate = new(1995, 10, 20) },
                     item => { item.MiddleName = "Ивановна"; item.BirthDate = new(1988, 3, 21); });
             }
-
+            string databasePath = Path.Combine(root, "shop.db");
+            using (var context = new ShopEntityContext(databasePath))
+            {
+                CheckRepository<ShopDao>(() => new ShopDaoDataBaseRepository(context),
+                    () => new() { Name = "Перекрёсток", Code = "S-001" },
+                    item => item.Name = "ВкусВилл");
+                CheckRepository<GoodDao>(() => new GoodDaoDataBaseRepository(context),
+                    () => new() { Name = "Молоко", Code = "G-001" },
+                    item => item.Code = "G-002");
+                CheckRepository<ClientDao>(() => new ClientDaoDataBaseRepository(context),
+                    () => new() { FirstName = "Иван", LastName = "Иванов", BirthDate = new(1990, 5, 15) },
+                    item => item.MiddleName = "Сергеевич");
+                new ShopDaoDataBaseRepository(context).Create(
+                    new ShopDao { Id = 99, Name = "Магнит", Code = "PERSIST-99" });
+            }
+            using (var reopened = new ShopEntityContext(databasePath))
+            {
+                Check(new ShopDaoDataBaseRepository(reopened).Read(99)?.Code == "PERSIST-99",
+                    "SQLite сохраняет данные между контекстами");
+            }
             Console.WriteLine($"Успешно: {_checks} проверок.");
             return 0;
         }
@@ -44,6 +63,7 @@ internal static class Program
         }
         finally
         {
+            Microsoft.Data.Sqlite.SqliteConnection.ClearAllPools();
             // Удаляется только созданная этой проверкой временная папка с уникальным именем.
             Directory.Delete(root, true);
         }

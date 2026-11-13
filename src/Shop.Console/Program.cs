@@ -3,7 +3,7 @@ using Core.Interfaces;
 using Shop.Bll.Entities;
 using Shop.Dal.Entities;
 using Shop.Dal.Repositories;
-
+using Shop.Dal.Database;
 namespace Shop.ConsoleApp;
 
 internal static class Program
@@ -15,11 +15,27 @@ internal static class Program
             ? Path.Combine(AppContext.BaseDirectory, "data")
             : Path.GetFullPath(args[0]);
         Directory.CreateDirectory(dataPath);
-        Console.WriteLine("Задание 3: справочники магазина");
+        Console.WriteLine("Задание 4: справочники магазина");
         Console.WriteLine($"Данные: {dataPath}");
         SeedFiles(dataPath);
         DemonstrateBusinessRules();
-
+        using var context = new ShopEntityContext(Path.Combine(dataPath, "shop.db"));
+        var shops = new ShopDaoDataBaseRepository(context);
+        var clients = new ClientDaoDataBaseRepository(context);
+        var goods = new GoodDaoDataBaseRepository(context);
+        Seed(shops, CreateShops());
+        Seed(clients, CreateClients());
+        Seed(goods, CreateGoods());
+        Console.WriteLine($"SQLite: магазинов {shops.ReadAll().Count()}, клиентов {clients.ReadAll().Count()}, товаров {goods.ReadAll().Count()}.");
+        DemonstrateCrud(shops,
+            new ShopDao { Name = "ВкусВилл", Code = "DEMO-SHOP" },
+            shop => shop.Name = "ВкусВилл — обновлённое название");
+        DemonstrateCrud(clients,
+            new ClientDao { FirstName = "Мария", LastName = "Соколова", BirthDate = new(1993, 4, 12) },
+            client => client.LastName = "Орлова");
+        DemonstrateCrud(goods,
+            new GoodDao { Name = "Сок яблочный", Code = "DEMO-GOOD" },
+            good => good.Name = "Сок яблочный без сахара");
     }
 
     private static void SeedFiles(string path)
@@ -104,4 +120,21 @@ internal static class Program
         catch (ArgumentException) { Console.WriteLine("BLL: пустое название магазина отклонено."); }
     }
 
+    private static void DemonstrateCrud<T>(IRepository<T> repository, T item, Action<T> change)
+        where T : class, IEntity
+    {
+        Console.WriteLine($"CRUD {typeof(T).Name}:");
+        repository.Create(item);
+        Console.WriteLine($"  Create: создан Id={item.Id}.");
+        var loaded = repository.Read(item.Id) ?? throw new InvalidOperationException("Запись не сохранена.");
+        Console.WriteLine($"  Read: найден Id={loaded.Id}.");
+        change(loaded);
+        repository.Update(loaded);
+        Console.WriteLine($"  Update: изменён Id={loaded.Id}.");
+        Console.WriteLine($"  ReadAll: записей {repository.ReadAll().Count()}.");
+        repository.Delete(loaded.Id);
+        if (repository.Read(loaded.Id) is not null)
+            throw new InvalidOperationException("Запись не удалена.");
+        Console.WriteLine($"  Delete: удалён Id={loaded.Id}; основных записей {repository.ReadAll().Count()}.");
+    }
 }
